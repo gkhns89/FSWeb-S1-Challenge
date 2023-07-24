@@ -44,7 +44,7 @@ const fenomenler = [
   },
   {
     number: 2,
-    profile: "Justin Biber",
+    profile: "Justin Bieber",
     followers: 114165664,
     posts: 31371,
     platform: "Twitter",
@@ -154,8 +154,8 @@ console.log(fenomenler[0].profile);
 console.log(fenomenler[2].followers);
 /* Görev 2 (otomatik kontrol testi yapılmayacak):
 (işlev yazmanıza gerek yok)
-Fenomenler dizisinde bir yazım hatası var 😱 7. sıradaki fenomen 'Justin Bieber' ın soyismi 'Biber' olarak yanlış yazılmış. Bu sorunu düzeltin ve çalışmanızı kontrol etmek için console.log() yapın.
-
+Fenomenler dizisinde bir yazım hatası var 😱 7. sıradaki fenomen 'Justin Bieber' ın soyismi 'Biber' olarak yanlış yazılmış. Bu sorunu düzeltin ve çalışmanızı kontrol etmek için console.log() yapın.*/
+console.log(fenomenler[6].profile);
 
 /*  Görev 3:
 Aşağıdaki işlemleri yapmak için indekseGoreFenomen işlevini kullanın:
