@@ -246,8 +246,16 @@ Aşağıdakileri yapmak için enFenomenler'yi kullanın:
 ÖRNEK: enFenomenler(fenomenler) çağrıldığında sonuç olarak ["Instagram", "Cristiano Ronaldo", ... "Khabane lame"] dönemelidir
 */
 
-function enFenomenler(/*kod*/) {
-  /*kod*/
+function enFenomenler(fDizisi) {
+ let yeniDizi=fDizisi.filter(function (el){return el.followers>100000000})
+let isimDizisi = [];
+for (let i=0;i<yeniDizi.length;i++){
+
+  isimDizisi[i]=yeniDizi[i].profile;
+
+}
+
+ return isimDizisi;
 }
 
 /* Görev 8:
