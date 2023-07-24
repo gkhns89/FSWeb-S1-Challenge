@@ -202,8 +202,13 @@ Aşağıdakileri yapmak için fenomenSil'i kullanın:
 5. Ortaya çıkan diziyi döndürün
 
 ÖRNEK: fenomenSil işlevi fenomenler dizisi ve 0 indeks sayısı ile çağrılırsa, veri kümemizden 'Instagram' kaldırılmış olarak döndürür. */
-function fenomenSil(/*kod*/) {
-  /*kod*/
+function fenomenSil(fDizisi, fIndex) {
+  let yeniDizi = fDizisi;
+
+  yeniDizi.splice(fIndex,1)
+
+  return yeniDizi;
+
 }
 
 /* Görev 6:
