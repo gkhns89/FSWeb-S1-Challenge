@@ -181,8 +181,16 @@ Aşağıdakileri yapmak için profilListesi'ni kullanın:
 🌟 Dönüş ÖRNEĞİ: ["Instagram", "Cristiano Ronaldo", "Kylie"....]
 */
 
-function profilListesi(/*kod*/) {
-  /*kod*/
+function profilListesi(fDizisi) {
+  let yeniDizi = fDizisi;
+
+  for (let i = 0; i<yeniDizi.length;i++){
+
+yeniDizi[i]=yeniDizi[i].profile;
+
+  }
+
+return yeniDizi;
 }
 
 /* Görev 5:
