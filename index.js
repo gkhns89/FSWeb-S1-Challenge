@@ -184,13 +184,11 @@ Aşağıdakileri yapmak için profilListesi'ni kullanın:
 function profilListesi(fDizisi) {
   let yeniDizi = fDizisi;
 
-  for (let i = 0; i<yeniDizi.length;i++){
-
-yeniDizi[i]=yeniDizi[i].profile;
-
+  for (let i = 0; i < yeniDizi.length; i++) {
+    yeniDizi[i] = yeniDizi[i].profile;
   }
 
-return yeniDizi;
+  return yeniDizi;
 }
 
 /* Görev 5:
@@ -205,10 +203,9 @@ Aşağıdakileri yapmak için fenomenSil'i kullanın:
 function fenomenSil(fDizisi, fIndex) {
   let yeniDizi = fDizisi;
 
-  yeniDizi.splice(fIndex,1)
+  yeniDizi.splice(fIndex, 1);
 
   return yeniDizi;
-
 }
 
 /* Görev 6:
@@ -228,13 +225,25 @@ Aşağıdakileri yapmak için fenomenEkle'i kullanın:
 
 ÖRNEK: fenomenEkle(fenomenler, 6, "Workintech", 10000000, 2022, "Instagram") çağrıldığında dizinin sonuna yukarıdaki nesne en sona eklenerek yeni fenomenler dizisini döndürmelidir. */
 
-function fenomenEkle(fDizisi, fNumber, fProfile, fFollowers, fPosts, fPlatform) {
-  
+function fenomenEkle(
+  fDizisi,
+  fNumber,
+  fProfile,
+  fFollowers,
+  fPosts,
+  fPlatform
+) {
   let yeniDizi = fDizisi;
-  let newFeno = {number:fNumber,profile:fProfile,followers:fFollowers,posts:fPosts,platform:fPlatform};
+  let newFeno = {
+    number: fNumber,
+    profile: fProfile,
+    followers: fFollowers,
+    posts: fPosts,
+    platform: fPlatform,
+  };
 
   yeniDizi.push(newFeno);
-  
+
   return yeniDizi;
 }
 
@@ -247,15 +256,15 @@ Aşağıdakileri yapmak için enFenomenler'yi kullanın:
 */
 
 function enFenomenler(fDizisi) {
- let yeniDizi=fDizisi.filter(function (el){return el.followers>100000000})
-let isimDizisi = [];
-for (let i=0;i<yeniDizi.length;i++){
+  let yeniDizi = fDizisi.filter(function (el) {
+    return el.followers > 100000000;
+  });
+  let isimDizisi = [];
+  for (let i = 0; i < yeniDizi.length; i++) {
+    isimDizisi[i] = yeniDizi[i].profile;
+  }
 
-  isimDizisi[i]=yeniDizi[i].profile;
-
-}
-
- return isimDizisi;
+  return isimDizisi;
 }
 
 /* Görev 8:
@@ -268,9 +277,11 @@ Aşağıdakileri yapmak için fenomenGonderimSayisi'nı kullanın:
 */
 
 function fenomenGonderimSayisi(fDizisi, fProfile) {
-  let xArray = fDizisi.filter(function (el) {return fProfile==el.profile} )
-  
-  let postCount= xArray[0].posts;
+  let xArray = fDizisi.filter(function (el) {
+    return fProfile == el.profile;
+  });
+
+  let postCount = xArray[0].posts;
 
   return postCount;
 }
@@ -286,8 +297,15 @@ Not: Gönderi sayısı belli olmayan (NA) hesaba katmayın.
 Örnek: platformaGoreCokGonderiYapanFenomen(fenomenler, 'TikTok') çağrıldığında "charli damelio" dönmelidir
 */
 
-function platformaGoreCokGonderiYapanFenomen(/*kod*/) {
-  /*kod*/
+function platformaGoreCokGonderiYapanFenomen(fDizisi, fPlatform) {
+  let xArray = fDizisi.filter(
+    (obj) => obj.platform == fPlatform && obj.posts >= 0
+  );
+
+  const maxPosts = Math.max(...xArray.map((obj) => obj.posts));
+  xArray = fDizisi.filter((obj) => obj.posts === maxPosts);
+  console.log(maxPosts);
+  return xArray[0].profile;
 }
 
 /* ***** GÖREVLERİN SONU ***** */
